@@ -2,31 +2,31 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword(characters) {
-  // YOUR CODE GOES HERE
   var possibleSpecial = "!#$%&()*+,-./:;<=>?@[\]^_`{|}~"
   var letters = "abcdefghijklmnopqrstuvwxyz";
   var numbers = "1234567890";
   var upLetters = "ABCDEFGHIJKLMNOPQRSTUV"
+  // YOUR CODE GOES HERE
   var isUppercase = false;
   var isLowercase = false;
   var isSpecial = false;
   var isNumber = false;
 }
 
-
+//----Uppercase?----
   if (isUppercase) {
-
   }
 
+//----Lowercase?----
   if (isLowercase) {
-
   }
+
+//----Special----
   if (isSpecial) {
-
   }
+
+//----Number----
   if (isNumber) {
-    
-    
   }
   return"clicked button";
 
