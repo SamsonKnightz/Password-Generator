@@ -15,7 +15,9 @@ function generatePassword() {
   var isNumber = confirm("would you like to use numbers?");
 
 //----Uppercase?----
-  if (isUppercase) {
+  if (isUppercase = true) {
+    for (var i = 0; i <= passwordLength; i++)
+    random = Math.floor(Math.random() * upLetters.length);
     console.log("uppercase");
   }
 
