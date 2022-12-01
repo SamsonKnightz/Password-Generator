@@ -1,19 +1,36 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-function generatePassword() {
+function generatePassword(characters) {
   // YOUR CODE GOES HERE
-  var characters=
-  `0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMOPQRSTUVWXYZ!#$%&(/)*+,-./:;<=>?@[\]^_|~`;
+  var possibleSpecial = "!#$%&()*+,-./:;<=>?@[\]^_`{|}~"
+  var letters = "abcdefghijklmnopqrstuvwxyz";
+  var numbers = "1234567890";
+  var upLetters = "ABCDEFGHIJKLMNOPQRSTUV"
+  var isUppercase = false;
+  var isLowercase = false;
+  var isSpecial = false;
+  var isNumber = false;
+}
 
-  if (condition) {
-    
-  } else {
-    
+
+  if (isUppercase) {
+
   }
 
-  return;
-}
+  if (isLowercase) {
+
+  }
+  if (isSpecial) {
+
+  }
+  if (isNumber) {
+    
+    
+  }
+  return"clicked button";
+
+
 
 // Write password to the #password input
 function writePassword() {
