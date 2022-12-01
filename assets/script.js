@@ -11,7 +11,7 @@ function generatePassword() {
   // YOUR CODE GOES HERE
   var isUppercase = confirm("Would you like to use uppercase letters?");
   var isLowercase = confirm("Would you like to use lowercase letters?");
-  var isSpecial = confirm("Would you like to use special letters?");
+  var isSpecial = confirm("Would you like to use special characters?");
   var isNumber = confirm("would you like to use numbers?");
 
 //----Uppercase?----
