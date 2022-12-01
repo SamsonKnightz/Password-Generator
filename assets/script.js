@@ -3,10 +3,11 @@ var generateBtn = document.querySelector("#generate");
 //----Global----
 var password = "";
 var passwordLength = 128;
-var possibleSpecial = "!#$%&()*+,-./:;<=>?@[\]^_`{|}~";
+var special = "!#$%&()*+,-./:;<=>?@[\]^_`{|}~";
 var letters = "abcdefghijklmnopqrstuvwxyz";
 var numbers = "1234567890";
 var upLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
 
 function generatePassword() {
   // YOUR CODE GOES HERE
@@ -16,22 +17,21 @@ function generatePassword() {
   var isSpecial = confirm("Would you like to use special characters?");
   var isNumber = confirm("would you like to use numbers?");
 
-  //----If none was selected----
-if (password >=8 && passwordLength <= 128){
-  alert("Please, select 1 selction of the options")
-}
 
 //----Uppercase?----
-  if (isUppercase = confirm) {
-    for (var i = 0; i <= passwordLength; i++)
-    var randomNumber = Math.floor(Math.random() * upLetters.length);
-    password += upLetters.substring(randomNumber, randomNumber + 1);
-    console.log(password)
+  if (isUppercase == true) {
+    for (var i = 0; i <= passwordLength; i++){
+    var random = Math.floor(Math.random() * upLetters.length);
+    upLetters[random];
+    }
+    console.log(random)
   }
 
 //----Lowercase?----
-  if (isLowercase) {
-    console.log("lowercase");
+  if (isLowercase = confirm) {
+    var randomNumber = Math.floor(Math.random() * letters.length);
+    password += letters.substring(randomNumber, randomNumber)
+    console.log(password);
   }
 
 //----Special----
