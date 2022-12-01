@@ -1,35 +1,42 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-function generatePassword(characters) {
-  var possibleSpecial = "!#$%&()*+,-./:;<=>?@[\]^_`{|}~"
+function generatePassword() {
+  var password = "";
+  var passwordLength = 12;
+  var possibleSpecial = "!#$%&()*+,-./:;<=>?@[\]^_`{|}~";
   var letters = "abcdefghijklmnopqrstuvwxyz";
   var numbers = "1234567890";
-  var upLetters = "ABCDEFGHIJKLMNOPQRSTUV"
+  var upLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   // YOUR CODE GOES HERE
-  var isUppercase = false;
-  var isLowercase = false;
-  var isSpecial = false;
-  var isNumber = false;
-}
+  var isUppercase = confirm("Would you like to use uppercase letters?");
+  var isLowercase = confirm("Would you like to use lowercase letters?");
+  var isSpecial = confirm("Would you like to use special letters?");
+  var isNumber = confirm("would you like to use numbers?");
 
 //----Uppercase?----
   if (isUppercase) {
+    console.log("uppercase");
   }
 
 //----Lowercase?----
   if (isLowercase) {
+    console.log("lowercase");
   }
 
 //----Special----
   if (isSpecial) {
+    console.log("special");
   }
 
 //----Number----
   if (isNumber) {
+    console.log("number");
   }
-  return"clicked button";
 
+  return "";
+
+}
 
 
 // Write password to the #password input
@@ -43,3 +50,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
