@@ -8,14 +8,14 @@ function generatePassword() {
   numberPrompt = parseInt(numberPrompt);
 
   //----If user does not enter between parameters, function will return with alert.
-  if(numberPrompt < 8){
-    return alert ("Password has to be more 8 than characters!");
-}
-//----If user does not enter between parameters, function will return with alert.
-  if(numberPrompt > 128){
-    return alert ("Password has to be less than 128 characters!");
+  if (numberPrompt < 8) {
+    return alert("Password has to be more 8 than characters!");
   }
-//----Prompts set to confirm or deny characters chosen
+  //----If user does not enter between parameters, function will return with alert.
+  if (numberPrompt > 128) {
+    return alert("Password has to be less than 128 characters!");
+  }
+  //----Prompts set to confirm or deny characters chosen
   var isUppercase = confirm("Would you like to use uppercase letters?");
   var isLowercase = confirm("Would you like to use lowercase letters?");
   var isSpecial = confirm("Would you like to use special characters?");
@@ -24,52 +24,60 @@ function generatePassword() {
   //----Uppercase?----
   var upLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   if (isUppercase) {
-    for (var i = 0; i <= numberPrompt; i++){
+    for (var i = 0; i <= numberPrompt; i++) {
       var random = Math.floor(Math.random() * upLetters.length);
-      password = password + upLetters[random];
+      generate = generate + upLetters;
+      console.log(isUppercase)
     }
   }
-  
+
   //----Lowercase?----
   var letters = "abcdefghijklmnopqrstuvwxyz";
   if (isLowercase) {
-    for (var i = 0; i <= numberPrompt; i++){
+    for (var i = 0; i <= numberPrompt; i++) {
       var random = Math.floor(Math.random() * letters.length);
-      password = password + letters[random];
+      generate = generate + upLetters;
+      console.log(isLowercase)
     }
   }
-  
+
   //----Special----
   var special = "!#$%&()*+,-./:;<=>?@[\]^_`{|}~";
   if (isSpecial) {
-    for (var i = 0; i <= numberPrompt; i++){
+    for (var i = 0; i <= numberPrompt; i++) {
       var random = Math.floor(Math.random() * special.length);
-      password = password + special[random];
+      generate = generate + upLetters;
+      console.log(isSpecial)
     }
   }
-  
+
   //----Number----
   var numbers = "1234567890";
   if (isNumber) {
-    for (var i = 0; i <= numberPrompt; i++){
+    for (var i = 0; i <= numberPrompt; i++) {
       var random = Math.floor(Math.random() * numbers.length);
-      password = password + numbers[random];
+      generate = generate + upLetters;
+      console.log(isNumber)
     }
-    return password;
+  }
+  if (upLetters || isLowercase || letters || special) {
+    for (var i = 0; i <= numberPrompt; i++) {
+      var random = Math.floor(Math.random() * generate.length);
+      password = generate[random];
+    }
+  }
 }
 console.log(password)
 
-}
 
+  // Write password to the #password input
+  function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+    passwordText.value = password;
 
-  passwordText.value = password;
+  }
 
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+  // Add event listener to generate button
+  generateBtn.addEventListener("click", writePassword);
