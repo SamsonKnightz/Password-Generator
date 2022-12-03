@@ -36,7 +36,7 @@ function generatePassword() {
   if (isLowercase) {
     for (var i = 0; i <= numberPrompt; i++) {
       var random = Math.floor(Math.random() * letters.length);
-      generate = generate + upLetters;
+      generate = generate + isLowercase;
       console.log(isLowercase)
     }
   }
@@ -46,7 +46,7 @@ function generatePassword() {
   if (isSpecial) {
     for (var i = 0; i <= numberPrompt; i++) {
       var random = Math.floor(Math.random() * special.length);
-      generate = generate + upLetters;
+      generate = generate + special;
       console.log(isSpecial)
     }
   }
@@ -56,16 +56,17 @@ function generatePassword() {
   if (isNumber) {
     for (var i = 0; i <= numberPrompt; i++) {
       var random = Math.floor(Math.random() * numbers.length);
-      generate = generate + upLetters;
+      generate = generate + numbers;
       console.log(isNumber)
     }
   }
-  if (upLetters || isLowercase || letters || special) {
-    for (var i = 0; i <= numberPrompt; i++) {
+  if (upLetters || letters || special || numbers) {
+    for (var i = 0; i < numberPrompt; i++) {
       var random = Math.floor(Math.random() * generate.length);
-      password = generate[random];
+      password = password + generate[random];
     }
   }
+  return password;
 }
 console.log(password)
 
