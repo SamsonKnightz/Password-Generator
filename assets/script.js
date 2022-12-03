@@ -1,4 +1,5 @@
 var generateBtn = document.querySelector("#generate");
+//--Global--
 var password = "";
 var generate = "";
 
@@ -27,7 +28,6 @@ function generatePassword() {
     for (var i = 0; i <= numberPrompt; i++) {
       var random = Math.floor(Math.random() * upLetters.length);
       generate = generate + upLetters;
-      console.log(isUppercase)
     }
   }
 
@@ -37,29 +37,27 @@ function generatePassword() {
     for (var i = 0; i <= numberPrompt; i++) {
       var random = Math.floor(Math.random() * letters.length);
       generate = generate + isLowercase;
-      console.log(isLowercase)
     }
   }
 
-  //----Special----
+  //----Special?----
   var special = "!#$%&()*+,-./:;<=>?@[\]^_`{|}~";
   if (isSpecial) {
     for (var i = 0; i <= numberPrompt; i++) {
       var random = Math.floor(Math.random() * special.length);
       generate = generate + special;
-      console.log(isSpecial)
     }
   }
 
-  //----Number----
+  //----Number?----
   var numbers = "1234567890";
   if (isNumber) {
     for (var i = 0; i <= numberPrompt; i++) {
       var random = Math.floor(Math.random() * numbers.length);
       generate = generate + numbers;
-      console.log(isNumber)
     }
   }
+  //----Upon selction of each section, this will generate random characters from the selection----
   if (upLetters || letters || special || numbers) {
     for (var i = 0; i < numberPrompt; i++) {
       var random = Math.floor(Math.random() * generate.length);
@@ -68,7 +66,7 @@ function generatePassword() {
   }
   return password;
 }
-console.log(password)
+
 
 
   // Write password to the #password input
