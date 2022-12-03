@@ -1,21 +1,21 @@
 var generateBtn = document.querySelector("#generate");
-//----Global----
 var password = "";
 var passwordLength = 128;
 
 function generatePassword() {
-  // YOUR CODE GOES HERE
-  //----Prompts----
+  //--Set prompt to set boundaries of characters chosen
   var numberPrompt = prompt("Please chose between 8 - 128");
   numberPrompt = parseInt(numberPrompt);
+
+  //----If user does not enter between parameters, function will return with alert.
   if(numberPrompt <= 8){
     return alert ("Password has to be more than characters!");
 }
-
+//----If user does not enter between parameters, function will return with alert.
   if(numberPrompt >= 128){
     return alert ("Password has to be less than 128 characters!");
   }
-
+//----Prompts set to confirm or deny characters chosen
   var isUppercase = confirm("Would you like to use uppercase letters?");
   var isLowercase = confirm("Would you like to use lowercase letters?");
   var isSpecial = confirm("Would you like to use special characters?");
