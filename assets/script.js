@@ -6,20 +6,21 @@ var passwordLength = 128;
 function generatePassword() {
   // YOUR CODE GOES HERE
   //----Prompts----
+  var numberPrompt = prompt("Please chose between 8 - 128");
+  numberPrompt = parseInt(numberPrompt);
+  if(numberPrompt <= 8){
+    return alert ("Password has to be more than characters!");
+}
+
+  if(numberPrompt >= 128){
+    return alert ("Password has to be less than 128 characters!");
+  }
+
   var isUppercase = confirm("Would you like to use uppercase letters?");
   var isLowercase = confirm("Would you like to use lowercase letters?");
   var isSpecial = confirm("Would you like to use special characters?");
   var isNumber = confirm("would you like to use numbers?");
-  var numberPrompt = prompt("Please chose between 8 - 128");
-  numberPrompt = parseInt(numberPrompt);
 
-  if(numberPrompt < 8){
-    alert("Password has to be more than 8 characters!")
-  }
-
-  if(numberPrompt > 128){
-    alert("Password has to be less than 128 characters!")
-  }
 
   
   //----Uppercase?----
@@ -49,8 +50,8 @@ function generatePassword() {
     }
   }
   
-  var numbers = "1234567890";
   //----Number----
+  var numbers = "1234567890";
   if (isNumber) {
     for (var i = 0; i <= passwordLength; i++){
       var random = Math.floor(Math.random() * numbers.length);
