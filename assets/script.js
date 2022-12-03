@@ -1,4 +1,3 @@
-// Assignment Code
 var generateBtn = document.querySelector("#generate");
 //----Global----
 var password = "";
@@ -19,32 +18,38 @@ function generatePassword() {
 
 
 //----Uppercase?----
-  if (isUppercase == true) {
+  if (isUppercase) {
     for (var i = 0; i <= passwordLength; i++){
     var random = Math.floor(Math.random() * upLetters.length);
-    upLetters[random];
+    password += upLetters[random];
     }
-    console.log(random)
   }
 
 //----Lowercase?----
-  if (isLowercase = confirm) {
-    var randomNumber = Math.floor(Math.random() * letters.length);
-    password += letters.substring(randomNumber, randomNumber)
-    console.log(password);
+if (isLowercase) {
+  for (var i = 0; i <= passwordLength; i++){
+  var random = Math.floor(Math.random() * letters.length);
+  password += letters[random];
   }
+}
 
 //----Special----
-  if (isSpecial) {
-    console.log("special");
+if (isSpecial) {
+  for (var i = 0; i <= passwordLength; i++){
+  var random = Math.floor(Math.random() * special.length);
+  password += special[random];
   }
+}
 
 //----Number----
-  if (isNumber) {
-    console.log("number");
+if (isNumber) {
+  for (var i = 0; i <= passwordLength; i++){
+  var random = Math.floor(Math.random() * numbers.length);
+  password += numbers[random];
   }
-
-  return "";
+ return password;
+}
+console.log(password)
 
 }
 
@@ -60,4 +65,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
