@@ -1,5 +1,5 @@
 var generateBtn = document.querySelector("#generate");
-//--Global--
+//--Global
 var password = "";
 var generate = "";
 
