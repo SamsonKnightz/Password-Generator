@@ -21,7 +21,7 @@ function generatePassword() {
   if (isUppercase) {
     for (var i = 0; i <= passwordLength; i++){
     var random = Math.floor(Math.random() * upLetters.length);
-    password += upLetters[random];
+    password = password + upLetters[random];
     }
   }
 
@@ -29,7 +29,7 @@ function generatePassword() {
 if (isLowercase) {
   for (var i = 0; i <= passwordLength; i++){
   var random = Math.floor(Math.random() * letters.length);
-  password += letters[random];
+  password = password + letters[random];
   }
 }
 
@@ -37,7 +37,7 @@ if (isLowercase) {
 if (isSpecial) {
   for (var i = 0; i <= passwordLength; i++){
   var random = Math.floor(Math.random() * special.length);
-  password += special[random];
+  password = password + special[random];
   }
 }
 
@@ -45,7 +45,7 @@ if (isSpecial) {
 if (isNumber) {
   for (var i = 0; i <= passwordLength; i++){
   var random = Math.floor(Math.random() * numbers.length);
-  password += numbers[random];
+  password = password + numbers[random];
   }
  return password;
 }
