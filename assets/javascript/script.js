@@ -25,6 +25,10 @@ function generatePassword() {
   //----Uppercase?----
   var upLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   if (isUppercase) {
+    //----(1.) If "isUppercase" is true perform for loop using "numberPrompt" for parameter
+    //----(2.) Setting radom characters using Math random, Math floor rounds up to whole vaules to the "upLetters" length.
+    //----(3.) Generate will be concatnated with the generated values of the "upLetters" loop.
+    //----(4.) All loops are same for remaining selections "letters", "special", "numbers".
     for (var i = 0; i <= numberPrompt; i++) {
       var random = Math.floor(Math.random() * upLetters.length);
       generate = generate + upLetters;
@@ -57,7 +61,7 @@ function generatePassword() {
       generate = generate + numbers;
     }
   }
-  //----Upon selction of each section, this will generate random characters from the selection----
+  //----Upon selction of each section of "upLetters", "letters", "special", "numbers" for loops, will loop random selections of each section.
   if (upLetters || letters || special || numbers) {
     for (var i = 0; i < numberPrompt; i++) {
       var random = Math.floor(Math.random() * generate.length);
