@@ -11,30 +11,40 @@ Check out my other [projects](https://github.com/SamsonKnightz) on github.
 
 ## Description
 
++ Password Generator starts with a click of "Password Generator" button.
+ 
++ When you click the button you will given prompts for your password criteria. This will include a set length between 8 and 128 characters.
+
++ After setting length, you will be prompted to confirm whether or not to include, lowercase, uppercase, numbers, and/ or special characters.
+
+ + After all prompts are answered a password is then generated that matches users selected criteria.
+
 
 ## Table Of Contents
-+ [Naviagtion](#)
++ [How to use](#)
 
-+ [Contact](#)
++ [Full Website](#)
 
-+ [Resources](#)
-
-## Navigation
+## How to use
 + Click on the "Generate Password" button to start the password generatation process.
 
     ![Generate Button](./assets/images/GeneratePasswordButton.png)
 
 + You will be prompted to select between 8 - 128 characters.
-![blah](./assets/images/8-128.png)
+![images](./assets/images/8-128.png)
 + Then you will be prompted to use lowercase characters.
-![blah](./assets/images/lowercase.png)
+![lowercase](./assets/images/lowercase.png)
 
 + Then you will be prompted to use uppercase characters.
-![blah](./assets/images/uppercase.png)
+![uppercase](./assets/images/uppercase.png)
 
-![blah](./assets/images/numbers.png)
++ Then you will be prompted to use numeric characters.
+![numbers](./assets/images/numbers.png)
++ Then you will be prompted to use special characters.
+![characters](./assets/images/special%20characters.png)
 
-![blah](./assets/images/special%20characters.png)
++ You will then be presented with a generated password.
+![Generated Password](./assets/images/GeneratedPassword.png)
 
-![blah](./assets/images/password%20generator.png)
-## Contact
+## Full Website
+![full website](./assets/images/password%20generator.png)
